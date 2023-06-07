@@ -25,13 +25,6 @@
         name: wireshark
         state: latest
 
-<<<<<<< HEAD
-
----------------------------------------------------------
-=======
--------------------------------------------
->>>>>>> b40e59bb9db53eeade28c288a40e8d0f4c414ec0
-
 ---
 - name: create directory, file and set timezones on all servers
   hosts: webservers, nfs, db
