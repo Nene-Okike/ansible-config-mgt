@@ -17,7 +17,7 @@ A. Install and configure Ansible client to act as a Jump Server/Bastion Host
  
  ![ansibleversion](ansibleversion.png)
 
- Note they python version that was installed because ansible runs on python
+ Note the python version that was installed because ansible runs on python
 
  4. Configure Jenkins build job to save your repository content every time you make a new commit.
  -Create a new Freestyle project "projectansible" in Jenkins and using the URL of the ‘ansible-config-mgt’ repository.
@@ -51,7 +51,6 @@ Task 2:
  2. In the ansible-config-mgt GitHub repository, create and checkout into a new branch, feat/prj-11, that will be used for development of a new feature.
 git checkout -b feat/prj-11
  
-
 3. Create a directory and name it playbooks – it will be used to store all playbook files.
 
 4. Create a directory and name it inventory – it will be used to keep  hosts organised.
@@ -62,13 +61,12 @@ git checkout -b feat/prj-11
 
 step 3 
 ### Set up an Ansible Inventory
- 1. Run the following commands to import you key into ssh agent
+ 1. Run the following commands to import your key into ssh agent
  
+  $ eval `ssh-agent -s`
+  $ ssh-add jenk.pem
 
- $ eval `ssh-agent -s`
- $ ssh-add jenk.pem
-
- Confirm that the key has been added with this commandssh-add -l
+ Confirm that the key has been added with this command ssh-add -l
 
  ssh into jenkins-ansible server with this command
 
